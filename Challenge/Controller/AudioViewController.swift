@@ -13,6 +13,7 @@ class AudioViewController: UIViewController {
 
     @IBOutlet weak var viewAnim: UIView!
     @IBOutlet weak var btnPlay: UIButton!
+    @IBOutlet weak var btnUser: UIButton!
     @IBOutlet weak var labelSong_: UILabel!
     @IBOutlet weak var labelUser: UILabel!
     
@@ -20,12 +21,15 @@ class AudioViewController: UIViewController {
 
     var playing = false
     let song = "halloween"
-    
+    var image:UIImage!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         labelSong_.text = song
         labelUser.text = oUser.userName
+        image = oUser.loadImageFromDiskWith(fileName: "profile.png")
+        btnUser.setImage(image, for: .normal)
+        
         let sound = Bundle.main.path(forResource:song, ofType:"mp3")
         
         do{
@@ -62,6 +66,12 @@ class AudioViewController: UIViewController {
         }
         
         
+    }
+    
+    @IBAction func pressBtnProfile(){
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        self.present(vc, animated: true, completion: nil)
     }
     @IBAction func pressBtnExit(){
         oUser.logout()
