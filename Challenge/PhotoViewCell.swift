@@ -9,16 +9,16 @@ import UIKit
 
 class PhotoViewCell: UICollectionViewCell {
     @IBOutlet weak var labelTitle: UILabel!
-    @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var img: CustomImageView!
     
    func configureWithItem(item: Photo) {
     labelTitle?.text = item.title
        
-       let pictureURL = URL(string: item.thumbnailUrl)!
-       let pictureData = NSData(contentsOf: pictureURL as URL)
-       let image = UIImage(data: pictureData! as Data)
+    
+    if let url = URL(string: item.thumbnailUrl){
+        img.loadImage(from: url)
+    }
       
-       img.image = image
    }
 
 }
