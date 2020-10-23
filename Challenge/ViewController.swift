@@ -50,6 +50,32 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //  SOLUTION FOR SLOW
+        collectionViewPhotos.deselectItem(at: indexPath, animated: false)
+        let photo = indexPath.row
+        
+                let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = (storyboard.instantiateViewController(withIdentifier: "PhotoViewController") as? PhotoViewController)!
+        vc.photo = photosArray[photo]
+        self.present(vc, animated: true)
+            
+                
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let noOfCellsInRow = 2
+
+              let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+
+              let totalSpace = flowLayout.sectionInset.left
+                  + flowLayout.sectionInset.right
+                  + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
+
+              let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
+
+              return CGSize(width: size, height: size)
+       }
     
 }
 
