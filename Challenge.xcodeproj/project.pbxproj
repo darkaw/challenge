@@ -11,6 +11,8 @@
 		6EB26B962542482D008F008A /* PhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB26B952542482D008F008A /* PhotoViewCell.swift */; };
 		6EB26B9B2542567D008F008A /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB26B9A2542567D008F008A /* CustomImageView.swift */; };
 		6EB26B9E25425D68008F008A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB26B9D25425D68008F008A /* PhotoViewController.swift */; };
+		6EB26BA22542A23A008F008A /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB26BA12542A23A008F008A /* AudioViewController.swift */; };
+		6EB26BA82542A3D5008F008A /* halloween.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EB26BA72542A3D5008F008A /* halloween.mp3 */; };
 		6EF913A3254236F500B85F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF913A2254236F500B85F61 /* AppDelegate.swift */; };
 		6EF913A5254236F500B85F61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF913A4254236F500B85F61 /* SceneDelegate.swift */; };
 		6EF913A7254236F500B85F61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF913A6254236F500B85F61 /* ViewController.swift */; };
@@ -26,6 +28,8 @@
 		6EB26B952542482D008F008A /* PhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewCell.swift; sourceTree = "<group>"; };
 		6EB26B9A2542567D008F008A /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		6EB26B9D25425D68008F008A /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		6EB26BA12542A23A008F008A /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		6EB26BA72542A3D5008F008A /* halloween.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = halloween.mp3; sourceTree = "<group>"; };
 		6EF9139F254236F500B85F61 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EF913A2254236F500B85F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EF913A4254236F500B85F61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6EB26BA42542A247008F008A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6EB26B9A2542567D008F008A /* CustomImageView.swift */,
+				6EB26B952542482D008F008A /* PhotoViewCell.swift */,
+				6EF913A8254236F500B85F61 /* Main.storyboard */,
+				6EF913B0254236F800B85F61 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6EB26BA52542A24E008F008A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6EF913A6254236F500B85F61 /* ViewController.swift */,
+				6EB26B9D25425D68008F008A /* PhotoViewController.swift */,
+				6EB26BA12542A23A008F008A /* AudioViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6EB26BA62542A3C0008F008A /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				6EB26BA72542A3D5008F008A /* halloween.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		6EF91396254236F500B85F61 = {
 			isa = PBXGroup;
 			children = (
@@ -68,19 +101,16 @@
 		6EF913A1254236F500B85F61 /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				6EB26BA62542A3C0008F008A /* Music */,
+				6EB26BA52542A24E008F008A /* Controller */,
+				6EB26BA42542A247008F008A /* View */,
 				6EF913BA2542391700B85F61 /* Model */,
 				6EF913A2254236F500B85F61 /* AppDelegate.swift */,
+				6EB26B9225423E78008F008A /* Service.swift */,
 				6EF913A4254236F500B85F61 /* SceneDelegate.swift */,
-				6EF913A6254236F500B85F61 /* ViewController.swift */,
-				6EB26B9D25425D68008F008A /* PhotoViewController.swift */,
-				6EF913A8254236F500B85F61 /* Main.storyboard */,
 				6EF913AE254236F800B85F61 /* Assets.xcassets */,
-				6EF913B0254236F800B85F61 /* LaunchScreen.storyboard */,
 				6EF913B3254236F800B85F61 /* Info.plist */,
 				6EF913AB254236F500B85F61 /* Challenge.xcdatamodeld */,
-				6EB26B9225423E78008F008A /* Service.swift */,
-				6EB26B952542482D008F008A /* PhotoViewCell.swift */,
-				6EB26B9A2542567D008F008A /* CustomImageView.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -152,6 +182,7 @@
 			files = (
 				6EF913B2254236F800B85F61 /* LaunchScreen.storyboard in Resources */,
 				6EF913AF254236F800B85F61 /* Assets.xcassets in Resources */,
+				6EB26BA82542A3D5008F008A /* halloween.mp3 in Resources */,
 				6EF913AA254236F500B85F61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +203,7 @@
 				6EF913A5254236F500B85F61 /* SceneDelegate.swift in Sources */,
 				6EF913BC2542392E00B85F61 /* photo.swift in Sources */,
 				6EB26B9325423E78008F008A /* Service.swift in Sources */,
+				6EB26BA22542A23A008F008A /* AudioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
