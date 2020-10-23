@@ -27,8 +27,14 @@ class AudioViewController: UIViewController {
         
         labelSong_.text = song
         labelUser.text = oUser.userName
-        image = oUser.loadImageFromDiskWith(fileName: "profile.png")
-        btnUser.setImage(image, for: .normal)
+        if(oUser.image == true){
+            image = oUser.loadImageFromDiskWith(fileName: "profile.png")
+            btnUser.setImage(image, for: .normal)
+        }else{
+            btnUser.setImage(UIImage(named: "user"), for: .normal)
+        }
+        
+       
         
         let sound = Bundle.main.path(forResource:song, ofType:"mp3")
         

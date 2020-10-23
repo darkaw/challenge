@@ -78,14 +78,18 @@ extension CreateUserViewController: UIImagePickerControllerDelegate, UINavigatio
         self.dismiss(animated: true) { [weak self] in
 
             guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
-            //Setting image to your image view
-            self?.imgUser.image = image
+           
+            oUser.saveImage(imageName: "profile.png", image: image)
+            self?.imgUser.image =  oUser.loadImageFromDiskWith(fileName: "profile.png")
+            oUser.image = true
         }
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
+   
 
 }
 

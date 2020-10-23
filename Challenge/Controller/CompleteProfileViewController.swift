@@ -25,7 +25,6 @@ class CompleteProfileViewController: UIViewController {
         oUser.lastName = txtLastName.text
         oUser.bio = textViewBio.text!
         oUser.login = true
-        print(oUser.login)
         oUser.saveData()
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "AudioViewController") as! AudioViewController
