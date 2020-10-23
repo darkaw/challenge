@@ -34,6 +34,10 @@ class ViewController: UIViewController {
             self.collectionViewPhotos.reloadData()
         }
     }
+    
+    @IBAction func pressBtnClose(){
+        dismiss(animated: true, completion: nil)
+    }
 
 }
 

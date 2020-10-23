@@ -13,7 +13,8 @@ class AudioViewController: UIViewController {
 
     @IBOutlet weak var viewAnim: UIView!
     @IBOutlet weak var btnPlay: UIButton!
-    @IBOutlet weak var labelSong: UILabel!
+    @IBOutlet weak var labelSong_: UILabel!
+    @IBOutlet weak var labelUser: UILabel!
     
     var audioPlayer = AVAudioPlayer()
 
@@ -23,7 +24,8 @@ class AudioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelSong.text = song
+        labelSong_.text = song
+        labelUser.text = oUser.userName
         let sound = Bundle.main.path(forResource:song, ofType:"mp3")
         
         do{
@@ -59,6 +61,21 @@ class AudioViewController: UIViewController {
             
         }
         
+        
+    }
+    @IBAction func pressBtnExit(){
+        oUser.logout()
+        oUser.saveData()
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CreateUserViewController") as! CreateUserViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+        
+    }
+  
+    @IBAction func pressBtnPhotos(){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
         
     }
   
