@@ -304,17 +304,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFi-ey-ERg">
-                                <rect key="frame" x="20" y="98" width="50" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JFi-ey-ERg">
+                                <rect key="frame" x="20" y="98" width="100" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="kEA-cE-ch4"/>
+                                    <constraint firstAttribute="width" constant="100" id="kEA-cE-ch4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybs-42-4cL">
-                                <rect key="frame" x="20" y="40" width="50" height="50"/>
+                                <rect key="frame" x="50" y="40" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fdf-fW-cZy"/>
                                     <constraint firstAttribute="width" constant="50" id="hwm-cz-Xqw"/>
@@ -351,7 +351,7 @@
                         <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9rQ-HB-Jbl" firstAttribute="centerX" secondItem="nLA-jO-pwk" secondAttribute="centerX" id="ACr-z4-Q1x"/>
-                            <constraint firstItem="ybs-42-4cL" firstAttribute="leading" secondItem="nLA-jO-pwk" secondAttribute="leading" constant="20" id="ESG-Gc-cvi"/>
+                            <constraint firstItem="ybs-42-4cL" firstAttribute="leading" secondItem="nLA-jO-pwk" secondAttribute="leading" constant="50" id="ESG-Gc-cvi"/>
                             <constraint firstItem="coH-Yv-VdD" firstAttribute="centerY" secondItem="nLA-jO-pwk" secondAttribute="centerY" id="Ig8-Zw-Ltk"/>
                             <constraint firstItem="GFh-Ls-lH0" firstAttribute="top" secondItem="coH-Yv-VdD" secondAttribute="bottom" constant="20" id="KcI-aH-8A0"/>
                             <constraint firstItem="coH-Yv-VdD" firstAttribute="centerX" secondItem="nLA-jO-pwk" secondAttribute="centerX" id="NIL-db-fny"/>

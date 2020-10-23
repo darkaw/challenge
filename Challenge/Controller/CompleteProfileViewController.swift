@@ -18,6 +18,7 @@ class CompleteProfileViewController: UIViewController {
 
         self.textViewBio.layer.borderColor = UIColor.lightGray.cgColor
         self.textViewBio.layer.borderWidth = 1
+        self.textViewBio.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
     }
     @IBAction func pressBtnNext(){
